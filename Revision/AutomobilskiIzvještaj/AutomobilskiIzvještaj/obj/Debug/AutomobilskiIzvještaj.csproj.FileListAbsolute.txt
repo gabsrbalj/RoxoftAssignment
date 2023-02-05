@@ -1,0 +1,7 @@
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\bin\Debug\AutomobilskiIzvještaj.exe.config
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\bin\Debug\AutomobilskiIzvještaj.exe
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\bin\Debug\AutomobilskiIzvještaj.pdb
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\obj\Debug\AutomobilskiIzvještaj.csprojAssemblyReference.cache
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\obj\Debug\AutomobilskiIzvještaj.csproj.CoreCompileInputs.cache
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\obj\Debug\AutomobilskiIzvještaj.exe
+C:\Users\Gabi\Desktop\Roxoft\C# ponavljanje zadatak - Automobil\AutomobilskiIzvještaj\AutomobilskiIzvještaj\obj\Debug\AutomobilskiIzvještaj.pdb
