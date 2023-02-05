@@ -80,5 +80,23 @@ namespace SauceTesting
             homePage.hamburgerOptionAllItems.Click();
             homePage.hamburgerCloseBtn.Click();
         }
+
+        public void About()
+        {
+            homePage.hamburgerIconButton.Click();
+            Thread.Sleep(1000);
+            homePage.hamburgerOptionAbout.Click();
+            Thread.Sleep(1000);
+            string expectedUrl = "https://saucelabs.com/";
+            Assert.IsTrue(Properties.driver.Url == "https://saucelabs.com/", "Actual and expected url are not the same");
+        }
+
+        public void ResetAppState()
+        {
+            homePage.hamburgerIconButton.Click();
+            Thread.Sleep(1000);
+            homePage.hamburgerOptionResetAppState.Click();
+            homePage.hamburgerCloseBtn.Click();
+        }
     }
 }
