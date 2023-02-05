@@ -62,7 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartPageObject.cs" />
+    <Compile Include="CheckoutDetailsPage.cs" />
+    <Compile Include="CheckoutPageObject.cs" />
     <Compile Include="CommonMethods.cs" />
+    <Compile Include="DetailsPageObject.cs" />
+    <Compile Include="HomePageObject.cs" />
     <Compile Include="LoginPageObject.cs" />
     <Compile Include="Properties.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +77,31 @@
     <Compile Include="TC04.cs" />
     <Compile Include="TC05.cs" />
     <Compile Include="TC06.cs" />
+    <Compile Include="TC07.cs" />
+    <Compile Include="TC08.cs" />
+    <Compile Include="TC09.cs" />
+    <Compile Include="TC10.cs" />
+    <Compile Include="TC11.cs" />
+    <Compile Include="TC12.cs" />
+    <Compile Include="TC13.cs" />
+    <Compile Include="TC14.cs" />
+    <Compile Include="TC15.cs" />
+    <Compile Include="TC16.cs" />
+    <Compile Include="TC17.cs" />
+    <Compile Include="TC18.cs" />
+    <Compile Include="TC19.cs" />
+    <Compile Include="TC20.cs" />
+    <Compile Include="TC21.cs" />
+    <Compile Include="TC22.cs" />
+    <Compile Include="TC23.cs" />
+    <Compile Include="TC24.cs" />
+    <Compile Include="TC25.cs" />
+    <Compile Include="TC26.cs" />
+    <Compile Include="TC27.cs" />
+    <Compile Include="TC28.cs" />
+    <Compile Include="TC29.cs" />
+    <Compile Include="TC30.cs" />
+    <Compile Include="TC31.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
