@@ -12,7 +12,7 @@ namespace SauceTesting
     class CommonMethods
     {
         LoginPageObject loginPage = new LoginPageObject();
-
+        HomePageObject homePage = new HomePageObject();
 
         public void VerifyElements(IWebElement element)
         {
@@ -73,5 +73,12 @@ namespace SauceTesting
             homePage.hamburgerOptionLogout.Click();
         }
 
+        public void AllItems()
+        {
+            homePage.hamburgerIconButton.Click();
+            Thread.Sleep(1000);
+            homePage.hamburgerOptionAllItems.Click();
+            homePage.hamburgerCloseBtn.Click();
+        }
     }
 }
