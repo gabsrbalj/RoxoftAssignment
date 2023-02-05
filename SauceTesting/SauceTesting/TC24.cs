@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SauceTesting
 {
-    class TC23
+    class TC24
     {
         [SetUp]
         public void Initialize()
@@ -20,11 +20,14 @@ namespace SauceTesting
 
         [Test]
 
-        public void TestCase23()
+        public void TestCase24()
         {
             CommonMethods commonMethods = new CommonMethods();
 
             commonMethods.Login("problem_user", "secret_sauce");
+
+            commonMethods.About();
+            Properties.driver.Navigate().Back();
 
             commonMethods.Logout();
         }

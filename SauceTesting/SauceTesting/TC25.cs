@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SauceTesting
 {
-    class TC23
+    class TC25
     {
         [SetUp]
         public void Initialize()
@@ -20,11 +21,14 @@ namespace SauceTesting
 
         [Test]
 
-        public void TestCase23()
+        public void TestCase25()
         {
             CommonMethods commonMethods = new CommonMethods();
 
             commonMethods.Login("problem_user", "secret_sauce");
+
+            commonMethods.SortingItemsFromAToZ();
+            Thread.Sleep(2000);
 
             commonMethods.Logout();
         }
