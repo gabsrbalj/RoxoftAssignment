@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,6 +98,160 @@ namespace SauceTesting
             Thread.Sleep(1000);
             homePage.hamburgerOptionResetAppState.Click();
             homePage.hamburgerCloseBtn.Click();
+        }
+
+        public void SortingItemsFromAToZ()
+        {
+            SelectElement dropdown = new SelectElement(Properties.driver.FindElement(By.ClassName("product_sort_container")));
+            dropdown.SelectByText("Name (A to Z)");
+
+            IList<IWebElement> itemNameList = Properties.driver.FindElements(By.ClassName("inventory_item_name"));
+            List<string> itemListOfStrings = new List<string>();
+
+            for (int i = 0; i < itemNameList.Count; i++)
+            {
+                itemListOfStrings.Add(itemNameList[i].Text);
+            }
+
+            for (int i = 1; i < itemListOfStrings.Count; i++)
+            {
+
+                List<int> stringComparisonList = new List<int>();
+                stringComparisonList.Add(itemListOfStrings[i].CompareTo(itemListOfStrings[i - 1]));
+                bool a = true;
+                foreach (int n in stringComparisonList)
+                {
+                    if (n == 1)
+                    {
+                        Assert.IsTrue(a, "Strings are not ordered alphabetically");
+                    }
+                    else
+                    {
+                        a = false;
+                        Assert.IsTrue(a, "Strings are not ordered alphabetically");
+                    }
+                }
+
+            }
+        }
+
+        public void SortingItemsFromZToA()
+        {
+
+            SelectElement dropdown = new SelectElement(Properties.driver.FindElement(By.ClassName("product_sort_container")));
+            dropdown.SelectByText("Name (Z to A)");
+
+            IList<IWebElement> itemNameList = Properties.driver.FindElements(By.ClassName("inventory_item_name"));
+            List<string> itemListOfStrings = new List<string>();
+
+            for (int i = 0; i < itemNameList.Count; i++)
+            {
+                itemListOfStrings.Add(itemNameList[i].Text);
+            }
+
+            for (int i = 1; i < itemListOfStrings.Count; i++)
+            {
+
+                List<int> stringComparisonList = new List<int>();
+                stringComparisonList.Add(itemListOfStrings[i].CompareTo(itemListOfStrings[i - 1]));
+                bool a = true;
+                foreach (int n in stringComparisonList)
+                {
+                    if (n == -1)
+                    {
+                        Assert.IsTrue(a, "Strings are not ordered from Z to A");
+                    }
+                    else
+                    {
+                        a = false;
+                        Assert.IsTrue(a, "Strings are not ordered from Z to A");
+                    }
+                }
+            }
+        }
+
+        public void SortByPriceHighToLow()
+        {
+            IList<IWebElement> listBefore = Properties.driver.FindElements(By.ClassName("inventory_item_price"));
+            List<string> valuesBefore = new List<string>();
+            List<double> doubleList = new List<double>();
+            for (int i = 0; i < listBefore.Count; i++)
+            {
+                valuesBefore.Add(listBefore[i].Text);
+            }
+
+            for (int i = 0; i < valuesBefore.Count; i++)
+            {
+                valuesBefore[i] = valuesBefore[i].Replace("$", "");
+                double d = double.Parse(valuesBefore[i]);
+                doubleList.Add(d);
+            }
+
+            SelectElement dropdown = new SelectElement(Properties.driver.FindElement(By.ClassName("product_sort_container")));
+            dropdown.SelectByText("Price (high to low)");
+
+            IList<IWebElement> listAfter = Properties.driver.FindElements(By.ClassName("inventory_item_price"));
+            List<string> valuesAfter = new List<string>();
+            List<double> doubleListAfter = new List<double>();
+
+            for (int i = 0; i < listAfter.Count; i++)
+            {
+                valuesAfter.Add(listAfter[i].Text);
+            }
+
+            for (int i = 0; i < valuesAfter.Count; i++)
+            {
+                valuesAfter[i] = valuesAfter[i].Replace("$", "");
+                double e = double.Parse(valuesAfter[i]);
+                doubleListAfter.Add(e);
+            }
+
+            doubleList.Sort();
+            List<double> reverse = Enumerable.Reverse(doubleList).ToList();
+
+            Assert.AreEqual(reverse, doubleListAfter, "Items are not sorted correctly");
+        }
+
+        public void SortByPriceLowToHigh()
+        {
+            IList<IWebElement> listBefore = Properties.driver.FindElements(By.ClassName("inventory_item_price"));
+            List<string> valuesBefore = new List<string>();
+            List<double> doubleList = new List<double>();
+            for (int i = 0; i < listBefore.Count; i++)
+            {
+                valuesBefore.Add(listBefore[i].Text);
+            }
+
+            for (int i = 0; i < valuesBefore.Count; i++)
+            {
+                valuesBefore[i] = valuesBefore[i].Replace("$", "");
+                double d = double.Parse(valuesBefore[i]);
+                doubleList.Add(d);
+            }
+
+            SelectElement dropdown = new SelectElement(Properties.driver.FindElement(By.ClassName("product_sort_container")));
+            dropdown.SelectByText("Price (low to high)");
+
+            IList<IWebElement> listAfter = Properties.driver.FindElements(By.ClassName("inventory_item_price"));
+            List<string> valuesAfter = new List<string>();
+            List<double> doubleListAfter = new List<double>();
+
+            for (int i = 0; i < listAfter.Count; i++)
+            {
+                valuesAfter.Add(listAfter[i].Text);
+            }
+
+            for (int i = 0; i < valuesAfter.Count; i++)
+            {
+                valuesAfter[i] = valuesAfter[i].Replace("$", "");
+                double e = double.Parse(valuesAfter[i]);
+                doubleListAfter.Add(e);
+            }
+
+            doubleList.Sort();
+
+
+            Assert.AreEqual(doubleList, doubleListAfter, "Items are not sorted correctly");
         }
     }
 }
