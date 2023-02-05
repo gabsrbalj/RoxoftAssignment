@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SauceTesting
 {
-    class TC19
+    class TC21
     {
         [SetUp]
         public void Initialize()
@@ -20,19 +20,15 @@ namespace SauceTesting
 
         [Test]
 
-        public void TestCase19()
+        public void TestCase21()
         {
             CommonMethods commonMethods = new CommonMethods();
-            HomePageObject homeObj = new HomePageObject();
-            CartPageObject cartObj = new CartPageObject();
+
             commonMethods.Login("standard_user", "secret_sauce");
             commonMethods.VerifyUrl("https://www.saucedemo.com/inventory.html");
 
-            homeObj.cartIcon.Click();
-            cartObj.checkoutBtn.Click();
-
-            commonMethods.Checkout("Gabrijela", "", "35254 Bebrina");
-            commonMethods.VerifyErrorMessage("Error: Last Name is required");
+            commonMethods.ResetAppState();
+            commonMethods.ShopCartIcon();
 
             commonMethods.Logout();
 
