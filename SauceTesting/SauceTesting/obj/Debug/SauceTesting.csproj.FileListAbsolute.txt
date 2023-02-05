@@ -1,0 +1,16 @@
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\SauceTesting.dll.config
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\SauceTesting.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\SauceTesting.pdb
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\nunit.framework.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\SeleniumExtras.PageObjects.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\WebDriver.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\WebDriver.Support.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\bin\Debug\nunit.framework.xml
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\obj\Debug\SauceTesting.csprojAssemblyReference.cache
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\obj\Debug\SauceTesting.csproj.CoreCompileInputs.cache
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\obj\Debug\SauceTesting.csproj.CopyComplete
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\obj\Debug\SauceTesting.dll
+C:\Users\Gabi\Desktop\RoxoftFinal\SauceTesting\SauceTesting\obj\Debug\SauceTesting.pdb
