@@ -253,5 +253,94 @@ namespace SauceTesting
 
             Assert.AreEqual(doubleList, doubleListAfter, "Items are not sorted correctly");
         }
+
+        public void SelectItemImage(string itemId)
+        {
+            string itemName = Properties.driver.FindElement(By.ClassName("inventory_item_name")).Text;
+            Properties.driver.FindElement(By.Id(itemId)).Click();
+            string itemNameDetails = Properties.driver.FindElement(By.XPath("//div[@class='inventory_details_name large_size']")).Text;
+
+            Assert.AreEqual(itemName, itemNameDetails, "Selected item does not match item displayed on details page");
+        }
+
+        public void AddItemToCart(string itemId)
+        {
+            bool bCondition = true;
+            try
+            {
+                Properties.driver.FindElement(By.Id(itemId)).Click();
+                bCondition = true;
+            }
+            catch (Exception)
+            {
+                bCondition = false;
+                Assert.IsTrue(bCondition, $"Item {itemId} is not successfully added");
+            }
+        }
+
+        public void VerifyBtnChangeToRemoveInventory()
+        {
+            string btnText = Properties.driver.FindElement(By.XPath("//*[@class='btn btn_secondary btn_small btn_inventory']")).GetAttribute("class");
+            Assert.IsTrue(btnText.Contains("btn_secondary"), "Button not changed");
+        }
+
+        public void VerifyBtnChangeToRemoveCart()
+        {
+            string btnText = Properties.driver.FindElement(By.XPath("//*[@class='btn btn_secondary btn_small cart_button']")).GetAttribute("class");
+            Assert.IsTrue(btnText.Contains("btn_secondary"), "Button not changed");
+        }
+
+        public void RemoveItem(string itemBtnId)
+        {
+            Properties.driver.FindElement(By.Id(itemBtnId)).Click();
+        }
+
+        public void ShopCartIcon()
+        {
+            try
+            {
+                string num = Properties.driver.FindElement(By.ClassName("shopping_cart_badge")).Text;
+                if (num == null)
+                {
+                    Assert.IsEmpty(num, "No icon number - cart empty");
+                }
+                else
+                {
+                    int numOfCartElementsIcon = int.Parse(num);
+                    Console.WriteLine(numOfCartElementsIcon);
+                    IList<IWebElement> numOfElementsInCart = Properties.driver.FindElements(By.ClassName("cart_quantity"));
+                    if (numOfElementsInCart.Count == numOfCartElementsIcon)
+                    {
+                        bool a = true;
+                        Assert.IsTrue(a, "Icon Number does not match number of elements in list");
+                    }
+                }
+            }
+            catch (NoSuchElementException)
+            {
+                Console.WriteLine("No such element - shopping cart empty");
+            }
+        }
+
+        public void CheckIfItemIsAddedToCartList(string itemId)
+        {
+            IWebElement itemElement = Properties.driver.FindElement(By.Id(itemId));
+            string elText = itemElement.Text;
+
+            homePage.cartIcon.Click();
+            try
+            {
+                IWebElement itemElementInCart = Properties.driver.FindElement(By.Id(itemId));
+                string elTextInCart = itemElementInCart.Text;
+                Assert.AreEqual(elText, elTextInCart, "Not matching values, item is not on cart list");
+            }
+            catch (Exception)
+            {
+                bool a = false;
+                Assert.IsTrue(a, "No matching values - item not on cart list");
+            }
+
+        }
+
     }
 }
