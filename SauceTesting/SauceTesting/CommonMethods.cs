@@ -65,5 +65,13 @@ namespace SauceTesting
             Assert.IsTrue(isErrorDisplayed, "Error message not displayed");
             Assert.AreEqual(expectedErrorMessage, actualErrorMessage);
         }
+
+        public void Logout()
+        {
+            homePage.hamburgerIconButton.Click();
+            Thread.Sleep(1000);
+            homePage.hamburgerOptionLogout.Click();
+        }
+
     }
 }
