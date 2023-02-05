@@ -14,6 +14,7 @@ namespace SauceTesting
     {
         LoginPageObject loginPage = new LoginPageObject();
         HomePageObject homePage = new HomePageObject();
+        CheckoutPageObject checkoutPage = new CheckoutPageObject();
 
         public void VerifyElements(IWebElement element)
         {
@@ -340,6 +341,17 @@ namespace SauceTesting
                 Assert.IsTrue(a, "No matching values - item not on cart list");
             }
 
+        }
+
+        public void Checkout(string firstName, string lastName, string postalCode)
+        {
+            checkoutPage.checkoutFirstName.SendKeys(firstName);
+            Thread.Sleep(1000);
+            checkoutPage.checkoutLastName.SendKeys(lastName);
+            Thread.Sleep(1000);
+            checkoutPage.checkoutPostalCode.SendKeys(postalCode);
+
+            checkoutPage.continueBtn.Click();
         }
 
     }

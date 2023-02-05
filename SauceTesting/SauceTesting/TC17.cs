@@ -1,15 +1,13 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace SauceTesting
 {
-    class TC16
+    class TC17
     {
         [SetUp]
         public void Initialize()
@@ -21,29 +19,20 @@ namespace SauceTesting
 
         [Test]
 
-        public void TestCase16()
+        public void TestCase17()
         {
             CommonMethods commonMethods = new CommonMethods();
-            CheckoutPageObject checkoutPage = new CheckoutPageObject();
             HomePageObject homeObj = new HomePageObject();
-
+            CartPageObject cartObj = new CartPageObject();
             commonMethods.Login("standard_user", "secret_sauce");
             commonMethods.VerifyUrl("https://www.saucedemo.com/inventory.html");
 
             homeObj.cartIcon.Click();
-            Thread.Sleep(1000);
-
-            CartPageObject cartObj = new CartPageObject();
             cartObj.checkoutBtn.Click();
-            Thread.Sleep(1000);
 
-            commonMethods.VerifyElements(checkoutPage.checkoutFirstName);
-            commonMethods.VerifyElements(checkoutPage.checkoutLastName);
-            commonMethods.VerifyElements(checkoutPage.checkoutPostalCode);
-            commonMethods.Verification(checkoutPage.continueBtn);
-            commonMethods.Verification(checkoutPage.cancelBtn);
+            commonMethods.Checkout("", "", "");
+            commonMethods.VerifyErrorMessage("Error: First Name is required");
 
-            Thread.Sleep(1000);
             commonMethods.Logout();
 
 
