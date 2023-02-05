@@ -1,0 +1,14 @@
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\SeleniumUsingNUnit.exe.config
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\SeleniumUsingNUnit.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\SeleniumUsingNUnit.pdb
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\nunit.framework.dll
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\WebDriver.dll
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\bin\Debug\nunit.framework.xml
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\obj\Debug\SeleniumUsingNUnit.csprojAssemblyReference.cache
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\obj\Debug\SeleniumUsingNUnit.csproj.CoreCompileInputs.cache
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\obj\Debug\SeleniumUsingNUnit.csproj.CopyComplete
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\obj\Debug\SeleniumUsingNUnit.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumUsingNUnit\SeleniumUsingNUnit\obj\Debug\SeleniumUsingNUnit.pdb

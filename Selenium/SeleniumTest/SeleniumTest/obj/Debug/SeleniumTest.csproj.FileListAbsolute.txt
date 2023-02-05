@@ -1,0 +1,12 @@
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\selenium-manager\linux\selenium-manager
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\selenium-manager\macos\selenium-manager
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\selenium-manager\windows\selenium-manager.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\SeleniumTest.exe.config
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\SeleniumTest.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\SeleniumTest.pdb
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\bin\Debug\WebDriver.dll
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\obj\Debug\SeleniumTest.csprojAssemblyReference.cache
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\obj\Debug\SeleniumTest.csproj.CoreCompileInputs.cache
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\obj\Debug\SeleniumTest.csproj.CopyComplete
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\obj\Debug\SeleniumTest.exe
+C:\Users\Gabi\Desktop\Roxoft\Selenium\SeleniumTest\SeleniumTest\obj\Debug\SeleniumTest.pdb
