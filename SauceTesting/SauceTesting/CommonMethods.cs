@@ -15,6 +15,7 @@ namespace SauceTesting
         LoginPageObject loginPage = new LoginPageObject();
         HomePageObject homePage = new HomePageObject();
         CheckoutPageObject checkoutPage = new CheckoutPageObject();
+        CheckoutDetailsPage checkoutDetailsPage = new CheckoutDetailsPage();
 
         public void VerifyElements(IWebElement element)
         {
@@ -353,6 +354,65 @@ namespace SauceTesting
 
             checkoutPage.continueBtn.Click();
         }
+
+        public List<string> ListOfItems()
+        {
+            IList<IWebElement> listOfItems = Properties.driver.FindElements(By.ClassName("inventory_item_name"));
+            List<string> listOfItemsStrings = new List<string>();
+
+            for (int i = 0; i < listOfItems.Count; i++)
+            {
+                listOfItemsStrings.Add(listOfItems[i].Text);
+            }
+            return listOfItemsStrings;
+        }
+
+        public void CheckPriceCalculation()
+        {
+            IList<IWebElement> listOfItems = Properties.driver.FindElements(By.ClassName("inventory_item_price"));
+            List<string> listOfItemsStrings = new List<string>();
+
+            for (int i = 0; i < listOfItems.Count; i++)
+            {
+                listOfItemsStrings.Add(listOfItems[i].Text);
+            }
+
+            List<decimal> listOfPrices = new List<decimal>();
+
+            for (int i = 0; i < listOfItemsStrings.Count; i++)
+            {
+                listOfItemsStrings[i] = listOfItemsStrings[i].Replace("$", "");
+                decimal e = decimal.Parse(listOfItemsStrings[i]);
+
+                listOfPrices.Add(e);
+            }
+
+
+            string priceFromCheckout = checkoutDetailsPage.summarySubTotalLabel.Text;
+            priceFromCheckout = priceFromCheckout.Replace("$", "");
+            priceFromCheckout = priceFromCheckout.Replace("Item total:", "");
+            decimal priceFromCheck = decimal.Parse(priceFromCheckout);
+
+            for (int i = 1; i < listOfPrices.Count; i++)
+            {
+                decimal totalSum = listOfPrices[i] + listOfPrices[i - 1];
+                Assert.AreEqual(priceFromCheck, totalSum);
+            }
+
+            string summaryTax = checkoutDetailsPage.summaryTaxLabel.Text;
+            summaryTax = summaryTax.Replace("Tax: $", "");
+            decimal priceTax = decimal.Parse(summaryTax);
+
+            decimal totalBill = priceFromCheck + priceTax;
+
+            string summaryTotal = checkoutDetailsPage.summaryTotalLabel.Text;
+            summaryTotal = summaryTotal.Replace("Total: $", "");
+            decimal summaryTotalPrice = decimal.Parse(summaryTotal);
+
+            Assert.AreEqual(totalBill, summaryTotalPrice);
+
+        }
+
 
     }
 }
